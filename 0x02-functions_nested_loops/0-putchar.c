@@ -1,15 +1,11 @@
 #include "main.h"
 
-/*
- * main - (entry point)
- *
- *Description: a program that prints _putchar, followed by a new line.
- *
- * Return: (0)
- *
- */
+/**
+*main - Entry point
+*Description: a program that prints _putchar, followed by a new line.
+*Return: (0)
+*/
 
-/* main - (entry point) */
 int main(void)
 {
 	_putchar('_');

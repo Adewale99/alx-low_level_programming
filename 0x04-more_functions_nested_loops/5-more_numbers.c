@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- *  * more_numbers - entry point
- *   *
- *    * Description: Prints the numbers with _putchar
- *     *
- *      * Return: void
+ * more_numbers - entry point
+ *
+ * Description: Prints the numbers with _putchar
+ *
+ * Return: void
  */
 
 void more_numbers(void)
@@ -25,5 +25,4 @@ void more_numbers(void)
 		}
 		_putchar('\n');
 	}
-}																	
-
+}

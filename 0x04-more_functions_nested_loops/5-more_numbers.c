@@ -19,10 +19,10 @@ void more_numbers(void)
 			tens = number / 10;
 			units = number % 10;
 			if (number > 9)
-				_putchar(tens + '0')
+				_putchar(tens + '0');
 
-					_putchar(units + '0');
+			_putchar(units + '0');
 		}
-		_putchar('\n');
+		_putchar('\n'5);
 	}
 }

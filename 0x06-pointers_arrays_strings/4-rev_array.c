@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 /**
  *  *reverse_array- prints in reverse
  *   *
@@ -23,5 +23,3 @@ void reverse_array(int *a, int n)
 		j--;
 	}
 }
-
-

@@ -38,10 +38,11 @@ int _atoi(char *s)
 		}
 		i++;
 	}
+
 	if (f == 0)
 		return (0);
 
-		return (n);
+	return (n);
 }
 
 /**
@@ -67,7 +68,6 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-
 	for (k = 1; k < argc; k++)
 	{
 		num = _atoi(argv[k]);
@@ -80,8 +80,6 @@ int main(int argc, char *argv[])
 	printf("%d\n", sum);
 	return (0);
 }
-
-
 
 
 

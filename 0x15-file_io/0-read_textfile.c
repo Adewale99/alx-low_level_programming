@@ -1,39 +1,33 @@
-#include "main.h"
-
+nclude "main.h"
 /**
- *read_textfile - Reads a text file and prints it to POSIX stdout.
- *@filename: A pointer to the name of the file.
- *@letters: The number of letters the
- *function should read and print.
- *Return: If the function fails or filename is NULL - 0.
- *O/w - the actual number of bytes the function can read and print.
+ *read_textfile - Reads a textfile and prints the contents to the POSIX STDOUT
+ *@filename: The name of the file to read from
+ *@letters: The number of characters it should print to the STDOUT
+ *Return: Returns the number of characters printed
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t fd, r, w;
-	char *buffer;
+	ssize_t fild = 0, chk = 0;
+	char *buffer;	
 
-	if (!filename)
+	if (!filename || !letters)
 		return (0);
 
-	buffer = malloc(letters * sizeof(char));
+	fild = open(filename, O_RDONLY);
+	if (fild < 0)
+		return (0);
+
+	buffer = malloc(sizeof(char) * (letters));
 	if (!buffer)
 		return (0);
 
-	fd = open(filename, O_RDONLY);
-	r = read(fd, buffer, letters);
-	w = write(STDOUT_FILENO, buffer, r);
-
-	if (fd == -1 || r == -1 || w == -1 || w != r)
-	{
-		free(buffer);
+	chk = read(fild, buffer, letters);
+	chk = write(STDOUT_FILENO, buffer, chk);
+	if (chk < 0)
 		return (0);
-	}
 
+	close(fild);
 	free(buffer);
-	close(fd);
-
-	return (w);
+	return (chk);
 }
-
 
